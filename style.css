@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "megadeth";
+    src: url(fonts/Megadeth.ttf);
+}
+
+@font-face {
+    font-family: "arizonia";
+    src: url(fonts/Arizonia-Regular.ttf);
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0%;
+    overflow-x: hidden;
+    font-family: "raleway";
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+#background{
+    background-image: url("bilder/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: -2;
+}
+
+#hero{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
+    height: 100vh;
+    
+}
+
+#main-text{
+    padding-left: 200px;
+    padding-right: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: right;
+}
+
+h1{
+    text-align: right;
+    color: white;
+    font-size: 102px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#logo{
+    height: 125px;
+}
+
+button{
+    cursor: pointer;
+    font-family: "raleway";
+    font-size: 30px;
+    height: 75px;
+    width: 335px;
+    border-radius: 0;
+    border: none;
+    font-weight: 700;
+    justify-self: right;
+    transition: 0.5s;
+}
+
+button:hover{
+    width: 100%;
+    transition: 0.5s;
+}
+
+h3{
+    position: relative;
+    display: inline-block;
+    font-family: "raleway";
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+    margin-bottom: -5px;
+  }
+  
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  .underline-animation2 {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+  
+  .underline-animation2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+    margin-bottom: -5px;
+  }
+  
+  .underline-animation2:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+
+
+#whats-popular{
+    padding: 50px;
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: 50px 400px;
+    width: auto;
+    height: 800px;
+}
+
+
+#whats-popular > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#whats-popular > div div{
+    display: flex;
+    align-items: center;
+}
+
+#whats-popular > div div p{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+
+
+footer{
+    padding-right: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer img{
+    height: 50px;
+}
+
+footer img:hover{
+    animation: rotate 10s linear infinite;
+}
+
+
+section {
+    gap: 50px;
+    position: relative;
+}
+
+#vinyl-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#vinyl-row div {
+    border: 2px solid black;
+    z-index: 2;
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    background-image: url(bilder/AnarchyInTheUk.jpg);
+    background-size: contain;
+}
+
+.vinyl-cover {
+    z-index: -1;
+    position: relative; /* Position the image absolutely within the div */
+    height: 300px;
+    width: 300px;
+    margin-left: 70px;
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+#vinyl-row div:hover .vinyl-cover { /* Adjust the selector to target .vinyl-cover */
+    transition: 1s;
+    margin-left: 150px;
+    transform: rotate(45deg); /* Use transform for rotation */
+}
+
+#promotion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: auto;
+    height: 600px;
+    background-color: black;
+}
+
+#promotion div:nth-child(1){
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#promotion div:nth-child(2){
+    background-image: url(bilder/Megadeth-FKP-web-900x600.png);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#promotion div:nth-child(1) img{
+    height: 300px;
+}
+
+h4{
+    font-weight: 300;
+    font-size: 30px;
+    font-family: "megadeth";
+    margin-top: -320px;
+    text-align: center;
+    color: white;
+}
+
+#promotion div:nth-child(1) h3{
+    margin-top: -300px;
+    font-size: 45px;
+    color: #FFB800;
+    font-family: "megadeth";
+    text-align: center;
+}
