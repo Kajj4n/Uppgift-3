@@ -4,23 +4,18 @@
 }
 
 @font-face {
-    font-family: "arizonia";
-    src: url(fonts/Arizonia-Regular.ttf);
-}
-
-@font-face {
     font-family: "raleway";
     src: url(fonts/Raleway-VariableFont_wght.ttf);
 }
 
-body{
+body {
     margin: 0;
-    padding: 0%;
+    padding: 0;
     overflow-x: hidden;
     font-family: "raleway";
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,12 +23,12 @@ header{
     padding-right: 100px;
 }
 
-nav{
+nav {
     display: flex;
     gap: 20px;
 }
 
-#background{
+#background {
     background-image: url("bilder/background.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -47,15 +42,14 @@ nav{
     z-index: -2;
 }
 
-#hero{
+#hero {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content auto;
+    grid-template-rows: min-content auto 800px 700px 800px 100px;
     height: 100vh;
-    
 }
 
-#main-text{
+#main-text {
     padding-left: 200px;
     padding-right: 100px;
     display: grid;
@@ -63,7 +57,7 @@ nav{
     justify-content: right;
 }
 
-h1{
+h1 {
     text-align: right;
     color: white;
     font-size: 102px;
@@ -71,11 +65,12 @@ h1{
     margin-bottom: 0;
 }
 
-#logo{
+#logo {
     height: 125px;
 }
 
-button{
+button {
+    background-color: white;
     cursor: pointer;
     font-family: "raleway";
     font-size: 30px;
@@ -88,14 +83,13 @@ button{
     transition: 0.5s;
 }
 
-button:hover{
+button:hover {
     width: 100%;
     transition: 0.5s;
 }
 
-h3{
+h3 {
     position: relative;
-    display: inline-block;
     font-family: "raleway";
     color: white;
     cursor: pointer;
@@ -106,9 +100,11 @@ h3{
     display: inline-block;
     position: relative;
     color: white;
-  }
-  
-  .underline-animation::after {
+}
+
+.underline-animation::after,
+.underline-animation2::after,
+.underline-animation-catalogue-h3::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -116,45 +112,35 @@ h3{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
     transform-origin: center;
     transition: transform 0.25s ease-out;
     margin-bottom: -5px;
-  }
-  
-  .underline-animation:hover::after {
+}
+
+.underline-animation:hover::after, 
+.underline-animation2:hover::after,
+.underline-animation-catalogue-h3:hover::after {
     transform: scaleX(1);
     transform-origin: center;
-  }
+} 
 
-  .underline-animation2 {
+.underline-animation2,
+.underline-animation-catalogue-h3 {
     display: inline-block;
     position: relative;
     color: black;
-  }
-  
-  .underline-animation2::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
+}
+
+.underline-animation::after{
+    background-color: white;
+}
+
+.underline-animation2::after,
+.underline-animation-catalogue-h3::after {
     background-color: black;
-    transform-origin: center;
-    transition: transform 0.25s ease-out;
-    margin-bottom: -5px;
-  }
-  
-  .underline-animation2:hover::after {
-    transform: scaleX(1);
-    transform-origin: center;
-  }
+}
 
-
-
-#whats-popular{
+.whats-popular {
     padding: 50px;
     display: grid;
     grid-column: 1fr;
@@ -163,52 +149,86 @@ h3{
     height: 800px;
 }
 
+.all-vinyls {
+    padding: 50px;
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: 50px 400px;
+    width: auto;
+    height: 800px;
+}
 
-#whats-popular > div:nth-child(1){
+.whats-popular > div:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#whats-popular > div div{
+.whats-popular > div > div {
     display: flex;
     align-items: center;
 }
 
-#whats-popular > div div p{
+.whats-popular > div div p {
     cursor: pointer;
     margin-right: 10px;
 }
 
-h2{
-    font-size: 40px;
+.whats-popular > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-
-footer{
-    padding-right: 30px;
+.whats-popular > div > div {
     display: flex;
-    justify-content: right;
     align-items: center;
 }
 
-footer img{
-    height: 50px;
+.whats-popular > div div p {
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-footer img:hover{
-    animation: rotate 10s linear infinite;
+h2 {
+    font-weight: 800;
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
 }
-
 
 section {
     gap: 50px;
     position: relative;
 }
 
-#vinyl-row{
+.vinyl-row {
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vinyl-row > section div:nth-child(1) {
+    z-index: 2;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+}
+.vinyl-row div:hover .vinyl-cover {
+    transition: 1s;
+    margin-left: 150px;
+    transform: rotate(45deg);
+}
+
+.vinyl-row2 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
@@ -217,60 +237,56 @@ section {
     justify-content: center;
 }
 
-
-#vinyl-row div {
-    border: 2px solid black;
+.vinyl-row2 > section div:nth-child(1) {
     z-index: 2;
     cursor: pointer;
-    height: 300px;
-    width: 300px;
-    background-image: url(bilder/AnarchyInTheUk.jpg);
+    height: 200px;
+    width: 200px;
     background-size: contain;
 }
-
+.vinyl-row2 div:hover .vinyl-cover {
+    transition: 1s;
+    margin-left: 150px;
+    transform: rotate(45deg);
+}
 .vinyl-cover {
     z-index: -1;
-    position: relative; /* Position the image absolutely within the div */
-    height: 300px;
-    width: 300px;
+    position: relative;
+    height: 200px;
+    width: 200px;
     margin-left: 70px;
     transform: rotate(-45deg);
     transition: 1s;
 }
 
-#vinyl-row div:hover .vinyl-cover { /* Adjust the selector to target .vinyl-cover */
-    transition: 1s;
-    margin-left: 150px;
-    transform: rotate(45deg); /* Use transform for rotation */
+
+#promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 700px;
+    background-image: url(bilder/Megadeth_Promotion.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#promotion{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: auto;
-    height: 600px;
-    background-color: black;
-}
-
-#promotion div:nth-child(1){
-    display: grid;
+#promotion div:nth-child(1) {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#promotion div:nth-child(2){
+#promotion div:nth-child(2) {
     background-image: url(bilder/Megadeth-FKP-web-900x600.png);
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#promotion div:nth-child(1) img{
-    height: 300px;
-}
 
-h4{
+h4 {
     font-weight: 300;
     font-size: 30px;
     font-family: "megadeth";
@@ -279,10 +295,283 @@ h4{
     color: white;
 }
 
-#promotion div:nth-child(1) h3{
+#promotion div:nth-child(1) h3 {
     margin-top: -300px;
-    font-size: 45px;
+    font-size: 38px;
     color: #FFB800;
     font-family: "megadeth";
     text-align: center;
+}
+
+h5, h6 {
+    margin: 0;
+}
+
+h5 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.test {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+}
+
+.test h5 {
+    margin-top: 0;
+}
+
+section button {
+    font-size: 10px;
+    background-color: white;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+}
+
+section button:hover {
+    width: 100px;
+    background-color: black;
+    color: white;
+}
+
+footer {
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto min-content;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: black;
+}
+
+footer div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+footer p {
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+footer h2 {
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+footer div:nth-child(3) > img {
+    height: 110px;
+}
+
+ul {
+    margin-top: 0px;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    list-style-type: none;
+}
+
+.list-path {
+    margin-top: 10px;
+}
+
+.list-category {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.catalogue-h3 {
+    color: black;
+}
+
+#catalogue{
+    justify-content: center;
+    display: flex;
+    height: 400px;
+    width: auto;
+}
+
+#catalogue h1{
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+
+#catalogue-header{
+    height: 100px;
+}
+
+#catalogue-hero{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 100px auto;
+}
+
+
+#bread{
+    display: flex;
+    align-items: center;
+}
+
+#bread h5{
+    margin-left: 50px;
+    font-size: 15px;
+    
+}
+
+#catalogue-background{
+    background-image: url("bilder/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#vinyl-nav{
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 1fr;
+
+}
+
+#vinyl-nav > div:nth-child(1){
+    position: sticky;
+    top: 0;
+}
+
+
+#vinyl-nav > div > ul {
+    text-align: start;
+}
+
+#vinyl-nav > div > ul > li {
+    margin-top: 10px;
+    display: block;
+}
+
+
+@media (max-width: 1800px) {
+    .vinyl-row{ 
+        grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+  @media (max-width: 1600px) {
+    .vinyl-row{ 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .vinyl-row{ 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+    #main-text h1{
+        font-size: 70px;
+
+    }
+  }
+
+
+
+
+@media (max-width: 1750px) {
+    .vinyl-row2{ 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .vinyl-row2{ 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+#img1 {
+    background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
+}
+#img2 {
+    background-image: url(bilder/Jimi_Hendrix_-_Electric_Ladyland.jpg);
+}
+#img3 {
+    background-image: url(bilder/RedHotChiliPeppersCalifornication.jpg);
+}
+#img4 {
+    background-image: url(bilder/Blackout_Scorpions_album_-_cover_art.png);
+}
+#img5 {
+    background-image: url(bilder/Police-album-synchronicity.jpg);
+}
+#img6 {
+    background-image: url(bilder/Pantera_The_Great_Southern_Trendkill.jpg);
+}
+#img7 {
+    background-image: url(bilder/Beatles_-_Abbey_Road.jpg);
+}
+#img8 {
+    background-image: url(bilder/The_Dark_Side_of_the_Moon_Cover.png);
+}
+#img9 {
+    background-image: url(bilder/Green_Day_-_Dookie_cover.jpg);
+}
+#img10 {
+    background-image: url(bilder/Dream_Theater_-_Images_and_Words.jpg);
+}
+#img11 {
+    background-image: url(bilder/Megadeth-RustInPeace.jpg);
+}
+#img12 {
+    background-image: url(bilder/Megadeth_-_Peace_Sells..._But_Whos_Buying-.jpg)
+}
+#img13 {
+    background-image: url(bilder/AnarchyInTheUk.jpg)
+}
+#img13 {
+    background-image: url(bilder/Countdown_To_Extinction.jpg)
+}
+#img14 {
+    background-image: url(bilder/Megadeth_-_The_World_Needs_a_Hero.jpg)
+}
+#img15 {
+    background-image: url(bilder/MegadethDystopia.png)
+}
+#img16 {
+    background-image: url(bilder/Megadeth_KIMB.jpg)
+}
+#img17 {
+    background-image: url(bilder/Megadeth-Youthanasia.jpg)
+}
+#img18 {
+    background-image: url(bilder/Megadeth_SickDyingDead.png)
+}
+#img19 {
+    background-image: url(bilder/Megadeath-Cryptic_Writings.jpg)
+}
+#img20 {
+    background-image: url(bilder/Megadeth_-_The_System_Has_Failed.jpg)
 }
