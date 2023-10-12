@@ -35,18 +35,17 @@ nav {
     background-size: cover;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    height: 100vh;
     width: 100vw;
     background-color: black;
-    z-index: -2;
+    display: grid;
+    grid-template-rows: 100px auto;
 }
 
 #hero {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content auto 800px 700px 800px 100px;
-    height: 100vh;
+    grid-template-rows: 100vh auto 700px auto 100px;
+    height: auto;
 }
 
 #main-text {
@@ -62,11 +61,10 @@ h1 {
     color: white;
     font-size: 102px;
     padding: 0;
-    margin-bottom: 0;
 }
 
 #logo {
-    height: 125px;
+    height: 85px;
 }
 
 button {
@@ -144,9 +142,6 @@ h3 {
     padding: 50px;
     display: grid;
     grid-column: 1fr;
-    grid-template-rows: 50px 400px;
-    width: auto;
-    height: 800px;
 }
 
 .all-vinyls {
@@ -264,8 +259,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 700px;
     background-image: url(bilder/Megadeth_Promotion.png);
     background-position: center;
     background-size: contain;
@@ -347,7 +340,6 @@ footer {
     grid-template-rows: auto min-content;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
     width: auto;
     background-color: black;
 }
@@ -396,9 +388,13 @@ li {
     font-size: 22px;
 }
 
-a {
-    color: white;
+a{
+    color: black;
     text-decoration: none;
+}
+
+header a {
+    color: white;
 }
 
 .catalogue-h3 {
@@ -426,7 +422,7 @@ a {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 100px auto;
+    grid-template-rows: 400px 100px auto 100px;
 }
 
 
@@ -459,6 +455,7 @@ a {
 #vinyl-nav > div:nth-child(1){
     position: sticky;
     top: 0;
+    height: min-content;
 }
 
 
