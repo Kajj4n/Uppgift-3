@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "megadeth";
-    src: url(fonts/Megadeth.ttf);
-}
-
-@font-face {
     font-family: "raleway";
     src: url(fonts/Raleway-VariableFont_wght.ttf);
 }
@@ -16,10 +11,11 @@ body {
 }
 
 header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 50px;
+    padding-left: 100px;
     padding-right: 100px;
 }
 
@@ -44,30 +40,37 @@ nav {
 #hero {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto 700px auto 100px;
+    grid-template-rows: 80vh auto 700px auto 100px;
     height: auto;
 }
 
 #main-text {
-    padding-left: 200px;
+    padding-left: 100px;
     padding-right: 100px;
     display: grid;
     align-items: center;
     justify-content: right;
 }
 
+#current{
+    text-decoration: underline solid 1px black;
+}
+
 h1 {
-    text-align: right;
+    text-align: center;
     color: white;
-    font-size: 102px;
+    font-size: 90px;
     padding: 0;
+    margin-top: 0;
 }
 
 #logo {
-    height: 85px;
+    border-bottom: none;
+    color: white;
+    font-size: 32px;
 }
 
-button {
+#main-text button {
     background-color: white;
     cursor: pointer;
     font-family: "raleway";
@@ -77,12 +80,13 @@ button {
     border-radius: 0;
     border: none;
     font-weight: 700;
-    justify-self: right;
+    justify-self: center;
     transition: 0.5s;
+    border-radius: 50px;
 }
 
-button:hover {
-    width: 100%;
+#main-text button:hover {
+    width: 450px;
     transition: 0.5s;
 }
 
@@ -139,7 +143,7 @@ h3 {
 }
 
 .whats-popular {
-    padding: 50px;
+    padding: 50px 100px 50px 100px;
     display: grid;
     grid-column: 1fr;
 }
@@ -187,7 +191,7 @@ h3 {
 
 h2 {
     font-weight: 800;
-    font-size: 30px;
+    font-size: 40px;
     padding-bottom: 10px;
     border-bottom: 3px solid black;
 }
@@ -317,15 +321,20 @@ h5 {
     margin-top: 0;
 }
 
-section button {
+section button{
+    font-family: "raleway";
+    font-weight: 700;
+    cursor: pointer;
     font-size: 10px;
     background-color: white;
     border: 1px solid black;
     width: 100px;
     height: 30px;
+    transition: 0.3s;
 }
 
 section button:hover {
+    transition: 0.3s;
     width: 100px;
     background-color: black;
     color: white;
@@ -404,7 +413,7 @@ header a {
 #catalogue{
     justify-content: center;
     display: flex;
-    height: 400px;
+    height: auto;
     width: auto;
 }
 
@@ -416,13 +425,15 @@ header a {
 
 #catalogue-header{
     height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #catalogue-hero{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 100px auto 100px;
+    grid-template-rows: 300px 100px auto 100px;
 }
 
 
@@ -438,9 +449,7 @@ header a {
 }
 
 #catalogue-background{
-    background-image: url("bilder/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
 }
 
 #vinyl-nav{
@@ -448,14 +457,30 @@ header a {
     padding-right: 50px;
     display: grid;
     grid-template-columns: 200px auto;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 100px;
+}
 
+#page-nav{
+    padding-left: 50px;
+    display: flex;
+    grid-column: 2/-1;
+}
+
+ nav > button{
+    cursor: pointer;
+    border: none;
+    font-family: "raleway";
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
 }
 
 #vinyl-nav > div:nth-child(1){
     position: sticky;
     top: 0;
     height: min-content;
+    grid-row: 1/-1;
 }
 
 
@@ -469,7 +494,11 @@ header a {
 }
 
 
+
+
 @media (max-width: 1800px) {
+    
+    
     .vinyl-row{ 
         grid-template-columns: repeat(4, 1fr); 
     }
@@ -481,6 +510,7 @@ header a {
   }
 
   @media (max-width: 1100px) {
+
     .vinyl-row{ 
         grid-template-columns: repeat(2, 1fr); 
     }
@@ -488,6 +518,10 @@ header a {
 
 
   @media (max-width: 1000px) {
+
+    #hero {
+        grid-template-rows: 100vh auto 400px auto 100px;
+    }
     #main-text h1{
         font-size: 70px;
 
