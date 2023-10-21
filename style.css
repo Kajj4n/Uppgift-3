@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
+    height: 100px;
 }
 
 nav {
@@ -191,7 +192,7 @@ h3 {
 
 h2 {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 35px;
     padding-bottom: 10px;
     border-bottom: 3px solid black;
 }
@@ -342,10 +343,10 @@ section button:hover {
 
 footer {
     color: white;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto min-content;
     justify-content: space-around;
     align-items: center;
@@ -354,11 +355,14 @@ footer {
 }
 
 footer div {
-    justify-content: center;
     align-items: center;
     display: flex;
     height: 100%;
 }
+
+footer div:nth-child(2) {
+    justify-content: end;
+  }
 
 footer p {
     font-size: 10px;
@@ -386,6 +390,10 @@ li {
     display: inline-block;
     font-weight: 700;
     list-style-type: none;
+}
+
+li:hover{
+    text-decoration: underline 1px solid white;
 }
 
 .list-path {
@@ -433,7 +441,7 @@ header a {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 100px auto 100px;
+    grid-template-rows: 100px 100px auto 100px;
 }
 
 
@@ -493,16 +501,24 @@ header a {
     display: block;
 }
 
+#background nav:nth-child(1){
+    background-color: white;
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 
 
 @media (max-width: 1800px) {
-    
-    
     .vinyl-row{ 
         grid-template-columns: repeat(4, 1fr); 
     }
   }
+
   @media (max-width: 1600px) {
     .vinyl-row{ 
         grid-template-columns: repeat(3, 1fr); 
@@ -510,26 +526,21 @@ header a {
   }
 
   @media (max-width: 1100px) {
-
     .vinyl-row{ 
         grid-template-columns: repeat(2, 1fr); 
     }
   }
 
-
   @media (max-width: 1000px) {
 
     #hero {
-        grid-template-rows: 100vh auto 400px auto 100px;
+        grid-template-rows:80vh auto 400px auto 100px;
     }
     #main-text h1{
         font-size: 70px;
 
     }
   }
-
-
-
 
 @media (max-width: 1750px) {
     .vinyl-row2{ 
@@ -538,11 +549,159 @@ header a {
   }
 
   @media (max-width: 1400px) {
+
+    #main-text button {
+        height: 55px;
+        width: 275px;
+      }
+
+      #main-text button:hover {
+        width: 300px;
+      }
+
+
+    #main-text h1{
+        font-size: 50px;
+    }
+
     .vinyl-row2{ 
         grid-template-columns: repeat(2, 1fr); 
     }
   }
 
+
+@media (max-width: 950px){
+
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    header a{
+        display: none;
+    }
+
+    #main-text{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      #main-text button{
+        justify-self: start;
+      }
+
+      #main-text h1{
+        text-align: left;
+    }
+    #background {
+        grid-template-rows: 50px 100px auto;
+    }
+
+}
+
+@media (min-width:950px){
+    aside,label, .hamburger-menu{
+        display: none;
+    }
+    
+    #background nav:nth-child(1){
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+
+    .vinyl-row {
+        grid-template-columns: 1fr;
+      }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .whats-popular {
+        padding: 50px 50px 50px 50px;
+        display: grid;
+        grid-column: 1fr;
+    }
+
+    .vinyl-row{
+        margin-top: 0px;
+    }
+      .whats-popular > div > div {
+        display: none;
+      }
+
+      h5{
+        font-size: 15px;
+      }
+
+      h6{
+        font-size: 10px;
+      }
+    
+      .whats-popular > div:nth-child(1) {
+        justify-content: center;
+      }
+
+      section{
+        justify-self: center;
+      }
+
+      footer{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      footer h2 {
+        font-size: 25px;
+      }
+
+      li{
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width:575px){
+        .vinyl-row {
+            grid-template-columns: 1fr;
+          }
+    
+        h2{
+            font-size: 30px;
+        }
+    
+        h5{
+        font-size: 13px;
+        }
+    
+        h6{
+        font-size: 8px;
+        }
+        #main-text h1{
+            font-size: 35px;
+
+        }
+
+        #main-text button{
+            height: 39px;
+            width: 193px;
+            font-size: 21px;
+          }
+
+        #logo{
+            font-size: 25px;
+        }
+
+        #background nav:nth-child(1) h3{
+            margin-left: -20px;
+            width: max-content;
+            padding: 0;
+            margin: 0;
+            font-size: 10px;
+
+        }
+    }
+    
 #img1 {
     background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
 }
