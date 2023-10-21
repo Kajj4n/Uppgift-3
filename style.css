@@ -336,7 +336,6 @@ section button{
 
 section button:hover {
     transition: 0.3s;
-    width: 100px;
     background-color: black;
     color: white;
 }
@@ -685,8 +684,6 @@ header a {
             width: 140px;
           }
 
-
-
         .vinyl-row {
             grid-template-columns: 1fr;
           }
@@ -728,11 +725,12 @@ header a {
     }
 
 @media (max-width: 380px){
+
     #background {
         grid-template-rows: 50px 50px auto;
       }
+
     #background nav:nth-child(1) {
-        border-bottom: 1px solid black;
         padding-left: 0px;
         padding-right: 0px;
         justify-content: center;
