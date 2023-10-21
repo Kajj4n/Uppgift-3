@@ -567,11 +567,29 @@ header a {
     .vinyl-row2{ 
         grid-template-columns: repeat(2, 1fr); 
     }
+
+    h2{
+        font-size: 25px;
+    }
+
   }
 
-
-@media (max-width: 950px){
-
+  
+  
+  @media (min-width:950px){
+    aside,label{
+        display: none;
+    }
+    
+    #background nav:nth-child(1){
+        display: none;
+    }
+}
+@media (max-width: 949px){
+    
+    .whats-popular{
+        padding: 50px 50px 50px 50px;
+    }
     header{
         padding-left: 50px;
         padding-right: 50px;
@@ -598,21 +616,11 @@ header a {
 
 }
 
-@media (min-width:950px){
-    aside,label, .hamburger-menu{
-        display: none;
-    }
-    
-    #background nav:nth-child(1){
-        display: none;
-    }
-}
-
 @media (max-width: 800px){
-
+    
     .vinyl-row {
         grid-template-columns: 1fr;
-      }
+    }
 
     h2{
         font-size: 30px;
@@ -660,8 +668,25 @@ header a {
         font-size: 10px;
       }
     }
-
+    
     @media (max-width:575px){
+        section button {
+            width: 70px;
+            height: 21px;
+            font-size: 7px;
+          }
+        .test {
+            width: 200px;
+            height: 50px;
+          }
+
+        .vinyl-row > section div:nth-child(1), .vinyl-cover {
+            height: 140px;
+            width: 140px;
+          }
+
+
+
         .vinyl-row {
             grid-template-columns: 1fr;
           }
@@ -701,6 +726,70 @@ header a {
 
         }
     }
+
+@media (max-width: 380px){
+    #background {
+        grid-template-rows: 50px 50px auto;
+      }
+    #background nav:nth-child(1) {
+        border-bottom: 1px solid black;
+        padding-left: 0px;
+        padding-right: 0px;
+        justify-content: center;
+      }
+
+    header{
+        height: 50px;
+        background: none;
+        background-color: white;
+        padding-left: 0;
+        padding-right: 0;
+       justify-content: center;
+    }
+
+    header h2{
+        width: max-content;
+    }
+
+    #logo{
+        color: black;
+    }
+    header nav{
+        display: none;
+    }
+
+    #main-text{
+        text-align: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    #main-text h1{
+        text-align: center;
+    }
+
+    #main-text button{
+        justify-self: center;
+    }
+
+    #main-text button:hover{
+        width: 250px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+    footer h2{
+        font-size: 15px;
+    }
+
+    li{
+        font-size: 6px;
+    }
+
+}
     
 #img1 {
     background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
