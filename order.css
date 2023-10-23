@@ -283,6 +283,9 @@ button:hover{
         padding-left: 5%;
         padding-right: 5%;
     }
+    p{
+        font-size: 10px;
+    }
 
     form{
         height: 680px;
