@@ -275,9 +275,17 @@ button:hover{
     }
 }
 @media (max-width: 540px){
+
+    input{
+        height: 32px;
+    }
     #right, #left, header, body nav{ 
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    form{
+        height: 680px;
     }
 
     .vinyl-cover, #right div{
