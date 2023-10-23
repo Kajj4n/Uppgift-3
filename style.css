@@ -573,7 +573,7 @@ footer p{
     }
 
     h2{
-        font-size: 25px;
+        font-size: 30px;
     }
 
   }
@@ -623,9 +623,6 @@ footer p{
         grid-template-columns: 1fr;
     }
 
-    h2{
-        font-size: 30px;
-    }
 
     .whats-popular {
         padding: 50px 50px 50px 50px;
@@ -662,7 +659,7 @@ footer p{
       }
 
       footer h2 {
-        font-size: 25px;
+        font-size: 21px;
       }
 
       li{
@@ -694,7 +691,7 @@ footer p{
           }
     
         h2{
-            font-size: 30px;
+            font-size: 21px;
         }
     
         h5{
