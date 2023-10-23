@@ -2,12 +2,12 @@
     font-family: "raleway";
     src: url(fonts/Raleway-VariableFont_wght.ttf);
 }
+
 body{
     display: grid;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 50px;
     grid-template-columns: 1fr 1fr;
     margin: 0;
-    height: 100vh;
     font-family: "raleway";
 }
 
@@ -40,6 +40,8 @@ nav{
 
 #left{
     border-right: 1px solid grey;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 #right{
@@ -64,9 +66,8 @@ nav{
 
 form{
     background-color: white;
-    margin-right: 100px;
-    margin-left: 100px;
     width: 700px;
+    height: 750px;
 }
 
 fieldset{
@@ -123,6 +124,15 @@ hr{
     background-color: gray;
 }
 
+body > nav{
+    background-color: white;
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
 #checkout-vinyl p {
     position: relative;
@@ -148,6 +158,7 @@ span{
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 button{
@@ -215,8 +226,122 @@ button:hover{
     background-color: black;
 }
 
-@media (max-width: 500px){
-    form{
-        transform: scale(0.55);
+@media (max-width: 1600px){
+
+    #left{
+        border-right: none;
     }
+
+    #right { 
+        justify-content: start;
+        align-items: start;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .vinyl-cover, #right div{
+        height: 350px;
+        width: 350px;
+    }
+
+    .vinyl-cover {
+        margin-left: 140px;
+      }
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr 50px;
+    }
+}
+
+@media (max-width: 900px){
+
+    #left{
+        border-right: none;
+    }
+
+    #right, #left, header { 
+
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    form{
+        width: auto;
+    }
+
+    header > nav{
+        display: none;
+
+    }
+}
+@media (max-width: 540px){
+    #right, #left, header, body nav{ 
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .vinyl-cover, #right div{
+        height: 245px;
+        width: 245px;
+    }
+
+    .vinyl-cover {
+        margin-left: 98px;
+      }
+
+      #logo {
+        font-size: 25px;
+      }
+      .underline-animation2, .underline-animation-catalogue-h3 {
+        display: inline-block;
+        position: relative;
+        color: black;
+        font-size: 10px;
+      }
+
+}
+
+
+@media (max-width: 400px){
+    fieldset > input{
+        width: 100%;
+    }
+
+    .vinyl-cover, #right div{
+        height: 172px;
+        width: 172px;
+    }
+
+    .vinyl-cover {
+        margin-left: 67px;
+      }
+}
+
+
+  @media (min-width:900px){
+    
+    body > nav{
+        display: none;
+    }
+}
+
+@media (max-width:899px){
+    body{
+        grid-template-rows: 50px 100px 1fr 50px;
+    }
+}
+
+@media (max-width: 380px){
+    body{
+        grid-template-rows: 50px 50px 1fr 50px;
+    }
+    
+    body > nav, header {
+        justify-content: center;
+    }
+
+    #left{
+        padding-top: 20px;
+    }
+
 }

@@ -510,6 +510,10 @@ header a {
     padding-right: 50px;
 }
 
+footer p{
+    margin-top: 0;
+}
+
 
 
 @media (max-width: 1800px) {
@@ -554,6 +558,7 @@ header a {
         width: 275px;
       }
 
+
       #main-text button:hover {
         width: 300px;
       }
@@ -576,16 +581,13 @@ header a {
   
   
   @media (min-width:950px){
-    aside,label{
-        display: none;
-    }
     
     #background nav:nth-child(1){
         display: none;
     }
 }
 @media (max-width: 949px){
-    
+
     .whats-popular{
         padding: 50px 50px 50px 50px;
     }
@@ -669,6 +671,9 @@ header a {
     }
     
     @media (max-width:575px){
+        #main-text button:hover{
+            width: 210px;
+          }
         section button {
             width: 70px;
             height: 21px;
@@ -785,6 +790,9 @@ header a {
 
     li{
         font-size: 6px;
+    }
+    .vinyl-row div:hover .vinyl-cover {
+        margin-left: 105px;
     }
 
 }
