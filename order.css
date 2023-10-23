@@ -275,9 +275,12 @@ button:hover{
     }
 }
 @media (max-width: 540px){
-
+    input::placeholder {
+        text-align: center;
+      }
     input{
         height: 32px;
+        padding-left: 0px;
     }
     #right, #left, header, body nav{ 
         padding-left: 5%;
@@ -286,6 +289,7 @@ button:hover{
     p{
         font-size: 10px;
     }
+
 
     form{
         height: 680px;
