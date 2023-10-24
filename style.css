@@ -99,6 +99,10 @@ h3 {
     transition: color 0.3s;
 }
 
+.underline-animation a{
+    color: white;
+}
+
 .underline-animation {
     display: inline-block;
     position: relative;
@@ -431,9 +435,11 @@ header a {
 }
 
 #catalogue-header{
-    height: 100px;
     padding-left: 50px;
     padding-right: 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 #catalogue-hero{
@@ -456,6 +462,7 @@ header a {
 }
 
 #catalogue-background{
+    height: 100px;
     background-color: black;
 }
 
@@ -500,7 +507,7 @@ header a {
     display: block;
 }
 
-#background nav:nth-child(1){
+#background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
     background-color: white;
     width: auto;
     height: 50px;
@@ -509,6 +516,10 @@ header a {
     padding-left: 50px;
     padding-right: 50px;
 }
+#catalogue-hero nav:nth-child(1){
+    background-color: black;
+}
+
 
 footer p{
     margin-top: 0;
@@ -582,15 +593,27 @@ footer p{
   
   @media (min-width:950px){
     
-    #background nav:nth-child(1){
+    #background nav:nth-child(1),  #catalogue-hero nav:nth-child(1){
         display: none;
     }
 }
 @media (max-width: 949px){
 
+    #catalogue-hero {
+        grid-template-rows: 50px 50px 100px 1fr 100px;
+      }
+      #catalogue-header{
+        background: none;
+        background-color: white;
+      }
+
+      #catalogue-header #logo{
+        color: black;
+      }
     .whats-popular{
         padding: 50px 50px 50px 50px;
     }
+
     header{
         padding-left: 50px;
         padding-right: 50px;
@@ -615,14 +638,26 @@ footer p{
         grid-template-rows: 50px 100px auto;
     }
 
+    #vinyl-nav > div:nth-child(1) {
+        display: none;
+      }
+      #vinyl-nav {
+          padding-left: 0px;
+          padding-right: 0px;
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        #page-nav {
+            grid-column: 1/-1;
+          }
 }
 
-@media (max-width: 800px){
+
+@media (max-width: 800px){  
     
-    .vinyl-row {
+    .vinyl-row{
         grid-template-columns: 1fr;
     }
-
 
     .whats-popular {
         padding: 50px 50px 50px 50px;
@@ -668,6 +703,15 @@ footer p{
     }
     
     @media (max-width:575px){
+
+        .vinyl-row2 {
+            grid-template-columns: 1fr;
+          }
+
+        #bread h5{
+            font-size: 11px;
+        }
+        
         #main-text button:hover{
             width: 210px;
           }
@@ -681,7 +725,7 @@ footer p{
             height: 50px;
           }
 
-        .vinyl-row > section div:nth-child(1), .vinyl-cover {
+        .vinyl-row > section div:nth-child(1),.vinyl-row2 > section div:nth-child(1), .vinyl-cover {
             height: 140px;
             width: 140px;
           }
@@ -716,7 +760,7 @@ footer p{
             font-size: 25px;
         }
 
-        #background nav:nth-child(1) h3{
+        #background nav:nth-child(1) h3,  #catalogue-hero nav:nth-child(1) h3{
             margin-left: -20px;
             width: max-content;
             padding: 0;
@@ -728,11 +772,24 @@ footer p{
 
 @media (max-width: 380px){
 
-    #background {
+    #bread{
+        justify-content: center;
+      }
+
+    #bread h5{
+        margin-left: 0px;
+    }
+
+    #background{
         grid-template-rows: 50px 50px auto;
       }
 
-    #background nav:nth-child(1) {
+    .vinyl-row2{
+        padding-left: 0px;
+    }
+
+
+    #background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
         padding-left: 0px;
         padding-right: 0px;
         justify-content: center;
@@ -788,7 +845,7 @@ footer p{
     li{
         font-size: 6px;
     }
-    .vinyl-row div:hover .vinyl-cover {
+    .vinyl-row div:hover .vinyl-cover, .vinyl-row2 div:hover .vinyl-cover {
         margin-left: 105px;
     }
 
