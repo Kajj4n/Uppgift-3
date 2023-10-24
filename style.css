@@ -768,92 +768,92 @@ footer p{
             font-size: 10px;
 
         }
+        
+            .vinyl-row2{
+                padding-left: 0px;
+            }
+        
+        
+            #background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
+                padding-left: 0px;
+                padding-right: 0px;
+                justify-content: center;
+              }
+        
+            header{
+                height: 50px;
+                background: none;
+                background-color: white;
+                padding-left: 0;
+                padding-right: 0;
+               justify-content: center;
+            }
+        
+            header h2{
+                width: max-content;
+            }
+        
+            #logo{
+                color: black;
+            }
+            header nav{
+                display: none;
+            }
+        
+            #main-text{
+                text-align: center;
+                padding-right: 0px;
+                padding-left: 0px;
+                width: 100%;
+            }
+        
+            #main-text h1{
+                text-align: center;
+            }
+        
+            #main-text button{
+                justify-self: center;
+            }
+        
+            #main-text button:hover{
+                width: 250px;
+            }
+        
+            h2{
+                font-size: 22px;
+            }
+        
+            footer h2{
+                font-size: 15px;
+            }
+        
+            li{
+                font-size: 6px;
+            }
+            .vinyl-row div:hover .vinyl-cover, .vinyl-row2 div:hover .vinyl-cover {
+                margin-left: 105px;
+            }
+            #bread{
+                justify-content: center;
+              }
+        
+            #bread h5{
+                margin-left: 0px;
+            }
+            #page-nav {
+                padding-left: 0px;
+                display: flex;
+                grid-column: 1/-1;
+                justify-content: center;
+              }
+        
+        
+            #background{
+                grid-template-rows: 50px 50px auto;
+              }
     }
 
-@media (max-width: 380px){
-    #page-nav {
-        padding-left: 0px;
-        justify-content: center;
-      }
 
-    #bread{
-        justify-content: center;
-      }
-
-    #bread h5{
-        margin-left: 0px;
-    }
-
-    #background{
-        grid-template-rows: 50px 50px auto;
-      }
-
-    .vinyl-row2{
-        padding-left: 0px;
-    }
-
-
-    #background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
-        padding-left: 0px;
-        padding-right: 0px;
-        justify-content: center;
-      }
-
-    header{
-        height: 50px;
-        background: none;
-        background-color: white;
-        padding-left: 0;
-        padding-right: 0;
-       justify-content: center;
-    }
-
-    header h2{
-        width: max-content;
-    }
-
-    #logo{
-        color: black;
-    }
-    header nav{
-        display: none;
-    }
-
-    #main-text{
-        text-align: center;
-        padding-right: 0px;
-        padding-left: 0px;
-        width: 100%;
-    }
-
-    #main-text h1{
-        text-align: center;
-    }
-
-    #main-text button{
-        justify-self: center;
-    }
-
-    #main-text button:hover{
-        width: 250px;
-    }
-
-    h2{
-        font-size: 22px;
-    }
-
-    footer h2{
-        font-size: 15px;
-    }
-
-    li{
-        font-size: 6px;
-    }
-    .vinyl-row div:hover .vinyl-cover, .vinyl-row2 div:hover .vinyl-cover {
-        margin-left: 105px;
-    }
-
-}
     
 #img1 {
     background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
