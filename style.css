@@ -362,6 +362,11 @@ footer {
     background-color: black;
 }
 
+#catalogue-hero footer{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 footer div {
     align-items: center;
     display: flex;
@@ -385,6 +390,23 @@ footer h2 {
 
 footer div:nth-child(3) > img {
     height: 110px;
+}
+
+details{
+    background-color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#drop-nav{
+    display: flex;
+    padding-left: 50px;
+}
+
+@media (min-width:950px){
+    #drop-nav{
+        display: none;
+    }
 }
 
 ul {
@@ -456,11 +478,13 @@ header a {
 
 
 #bread{
+    gap: 20px;
     display: flex;
     align-items: center;
 }
 
 #bread h5{
+    margin-top: 0px;
     margin-left: 50px;
     font-size: 15px;
     
@@ -603,7 +627,7 @@ footer p{
 @media (max-width: 949px){
 
     #catalogue-hero {
-        grid-template-rows: 50px 50px 100px 1fr 100px;
+        grid-template-rows: 50px 50px 100px max-content 1fr 100px;
       }
       #catalogue-header{
         background: none;
@@ -770,6 +794,11 @@ footer p{
             margin: 0;
             font-size: 10px;
 
+        }
+
+        #drop-nav{
+            padding-left: 0px;
+            justify-content: center;
         }
         
             .vinyl-row2{
