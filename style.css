@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "raleway";
+    overflow-x: hidden;
 }
 
 header {
@@ -40,7 +41,7 @@ nav {
 #hero {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80vh auto 700px auto 100px;
+    grid-template-rows: 80vh auto auto auto 100px;
     height: auto;
 }
 
@@ -260,6 +261,11 @@ section {
     margin-left: 70px;
     transform: rotate(-45deg);
     transition: 1s;
+}
+
+picture img{
+    width: 100vw;
+    
 }
 
 
@@ -546,9 +552,7 @@ footer p{
 
   @media (max-width: 1000px) {
 
-    #hero {
-        grid-template-rows:80vh auto 400px auto 100px;
-    }
+
     #main-text h1{
         font-size: 70px;
 
