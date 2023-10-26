@@ -6,7 +6,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: "raleway";
 }
 
@@ -148,7 +147,7 @@ h3 {
 }
 
 .whats-popular {
-    padding: 50px 100px 50px 100px;
+    padding: 50px 100px 100px 100px;
     display: grid;
     grid-column: 1fr;
 }
