@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <link rel="stylesheet" href="style.css">
+    <title>Band Of The Month</title> <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="catalogue-hero">
+        <nav>
+            <h3 class="underline-animation"><a href="index.html">Home</a></h3>
+            <h3 class="underline-animation"><a href="mailto: VinylCentral@gmail.com">Contact</a></h3>
+        </nav>
         <div id="catalogue-background">
             <header id="catalogue-header">
                 <h2 id="logo">VINYL CENTRAL</h2>
                 <nav>
                     <h3 class="underline-animation"><a href="index.html">Home</a></h3>
-                    <h3 class="underline-animation">Contact</h3>
+                    <h3 class="underline-animation"><a href="mailto: VinylCentral@gmail.com">Contact</a></h3>
                 </nav>
             </header>
-            <div id="catalogue">
-                <h1>BAND OF THE MONTH</h1>
-            </div>
         </div>
         <div id="bread">
-            <h5>Home / Catalogue / Band Of The Month</h5>
+            <h5>Home / Catalogue / Band Of The Month</h5> 
+        </div>
+        <div id="drop-nav">
+            <details>
+                <summary>Browse By</summary>
+                <p><a href="band_of_the_month.html">Band Of The Month</a></p>
+                <p><a href="catalogue.html">All Vinyls</a></p>
+                <p><a href="in_stock.html">In Stock</a></p>
+            </details>
         </div>
         <div id="vinyl-nav">
             <div>
@@ -39,10 +48,10 @@
                         <img class="vinyl-cover" src="bilder/RIP_Vinyl.png" alt="">
                     </div>
                     <h5>Rust In Peace</h5>
-                    <h6>MEGADETH</h6>
+                    <h6>MEGADETH <span>Out of stock!</span></h6>
                     <div class="test">
                         <h5>349kr</h5>
-                        <button onclick="window.location.href='order.html'">Buy</button>
+                        <button onclick="window.location.href='order.html'">Pre Order</button>
                     </div>
                 </section>
     
@@ -136,10 +145,10 @@
                         <img class="vinyl-cover" src="bilder/Cryptic_Writings_Vinyl.png" alt="">
                     </div>
                     <h5>Cryptic Writings</h5>
-                    <h6>MEGADETH</h6>
+                    <h6>MEGADETH <span>Out of stock!</span></h6>
                     <div class="test">
                         <h5>349kr</h5>
-                        <button onclick="window.location.href='order.html'">Buy</button>
+                        <button onclick="window.location.href='order.html'">Pre Order</button>
                     </div>
                 </section>
                 
@@ -154,37 +163,51 @@
                         <button onclick="window.location.href='order.html'">Buy</button>
                     </div>
                 </section>
+
+                <section>
+                    <div id="img21">
+                        <img class="vinyl-cover" src="bilder/Endgame_Vinyl.png" alt="">
+                    </div>
+                    <h5>Endgame</h5>
+                    <h6>MEGADETH</h6>
+                    <div class="test">
+                        <h5>349kr</h5>
+                        <button onclick="window.location.href='order.html'">Buy</button>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="img22">
+                        <img class="vinyl-cover" src="bilder/Th1rt3en_Vinyl.png" alt="">
+                    </div>
+                    <h5>Th1rt3en</h5>
+                    <h6>MEGADETH</h6>
+                    <div class="test">
+                        <h5>349kr</h5>
+                        <button onclick="window.location.href='order.html'">Buy</button>
+                    </div>
+                </section>
             </div>
-            <nav id="page-nav">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-            </nav>
         </div>
         <footer>
             <div>
-                 <h2>VINYL CENTRAL &copy;</h2>
+                 <h2>VINYL CENTRAL</h2>
             </div>
      
             <div>
-                 <ul>
-                     <li class="list-path">Home</li>
-                     <li>&nbsp;|&nbsp;</li>
-                     <li class="list-path">Rapport</li>
-                     <li>&nbsp;|&nbsp;</li>
-                     <li class="list-path">Catalogue</li>
-                     <li>&nbsp;|&nbsp;</li>
-                     <li class="list-path">Band Of The Month</li>
-                     <li>&nbsp;|&nbsp;</li>
-                     <li class="list-path">Contact</li>
-     
-                 </ul>
+                <ul>
+                    <li class="list-path"><a href="index.html">Home</a></li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="list-path"><a href="rapport.html">Rapport</a></li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="list-path"><a href="catalogue.html">Catalogue</a></li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="list-path"><a href="band_of_the_month.html">Band Of The Month</a></li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="list-path"><a href="mailto: VinylCentral@gmail.com">Contact</a></li>
+                </ul>
             </div>
-     
-            <div>
-                
-            </div>
-         
+
          </footer>
     </div>
 </body>

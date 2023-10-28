@@ -367,6 +367,10 @@ footer {
     padding-right: 50px;
 }
 
+footer a{
+    color: white;
+}
+
 footer div {
     align-items: center;
     display: flex;
@@ -396,6 +400,11 @@ details{
     background-color: white;
     font-size: 15px;
     font-weight: 700;
+}
+
+details > p:hover{
+    text-decoration: underline 1px solid black;
+
 }
 
 #drop-nav{
@@ -446,6 +455,16 @@ header a {
 
 .catalogue-h3 {
     color: black;
+}
+
+h6{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h6 span{
+    color: red;
 }
 
 #catalogue{
@@ -509,14 +528,23 @@ header a {
     grid-column: 2/-1;
 }
 
- nav > button{
+nav > button{
     cursor: pointer;
     border: none;
     font-family: "raleway";
     height: 30px;
     width: 30px;
+    border-radius: 50px;
     background-color: black;
     color: white;
+    transition: 0.3s;
+}
+
+nav > button:hover{
+    transition: 0.3s;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
 }
 
 #vinyl-nav > div:nth-child(1){
@@ -615,8 +643,6 @@ footer p{
     }
 
   }
-
-  
   
   @media (min-width:950px){
     
@@ -752,6 +778,9 @@ footer p{
             height: 50px;
           }
 
+        h6{
+            width: 200px;
+        }
         .vinyl-row > section div:nth-child(1),.vinyl-row2 > section div:nth-child(1), .vinyl-cover {
             height: 140px;
             width: 140px;
@@ -949,4 +978,10 @@ footer p{
 }
 #img20 {
     background-image: url(bilder/Megadeth_-_The_System_Has_Failed.jpg)
+}
+#img21 {
+    background-image: url(bilder/Endgame_album_art.jpg)
+}
+#img22 {
+    background-image: url(bilder/MegadethThirteen.jpg)
 }
