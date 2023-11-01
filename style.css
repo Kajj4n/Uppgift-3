@@ -21,8 +21,16 @@ header {
 }
 
 nav {
+    align-items: center;
     display: flex;
     gap: 20px;
+}
+
+picture img, img{
+    padding-left: 50px;
+    cursor: pointer;
+    height: 35px;
+    align-self: center;
 }
 
 #background {
@@ -202,6 +210,10 @@ h2 {
     border-bottom: 3px solid black;
 }
 
+header h2{
+    cursor: pointer;
+}
+
 section {
     gap: 50px;
     position: relative;
@@ -255,6 +267,7 @@ section {
     transform: rotate(45deg);
 }
 .vinyl-cover {
+    padding-left: 0px;
     z-index: -1;
     position: relative;
     height: 200px;
@@ -263,11 +276,13 @@ section {
     transform: rotate(-45deg);
     transition: 1s;
 }
-
-picture img{
+#promotion-picture img{
     width: 100vw;
-    
+    height: auto;
+    cursor: default;
+    padding-left: 0px;
 }
+    
 
 
 #promotion {
@@ -413,7 +428,7 @@ details > p:hover{
     padding-left: 50px;
 }
 
-@media (min-width:950px){
+@media (min-width:1000px){
     #drop-nav{
         display: none;
     }
@@ -521,12 +536,6 @@ h6 span{
     display: grid;
     grid-template-columns: 200px auto;
     grid-template-rows: 1fr 100px;
-}
-
-#page-nav{
-    padding-left: 50px;
-    display: flex;
-    grid-column: 2/-1;
 }
 
 nav > button{
@@ -645,13 +654,13 @@ footer p{
 
   }
   
-  @media (min-width:950px){
+  @media (min-width:1000px){
     
     #background nav:nth-child(1),  #catalogue-hero nav:nth-child(1){
         display: none;
     }
 }
-@media (max-width: 949px){
+@media (max-width: 999px){
 
     #catalogue-hero {
         grid-template-rows: 50px 50px 100px max-content 1fr 100px;
@@ -701,9 +710,6 @@ footer p{
           display: grid;
           grid-template-columns: 1fr;
         }
-        #page-nav {
-            grid-column: 1/-1;
-          }
 }
 
 
@@ -755,8 +761,20 @@ footer p{
         font-size: 10px;
       }
     }
+
+    @media (min-width:751px){
+
+        #second-nav img{
+            display: none;
+        }
+    }
     
-    @media (max-width:575px){
+    @media (max-width:750px){
+
+        picture img, img {
+            padding-left: 0px;
+            height: 24px;
+          }
 
         .vinyl-row2 {
             grid-template-columns: 1fr;
@@ -902,13 +920,6 @@ footer p{
             #bread h5{
                 margin-left: 0px;
             }
-            #page-nav {
-                padding-left: 0px;
-                display: flex;
-                grid-column: 1/-1;
-                justify-content: center;
-              }
-        
         
             #background{
                 grid-template-rows: 50px 50px auto;
@@ -916,7 +927,6 @@ footer p{
     }
 
 
-    
 #img1 {
     background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
 }
