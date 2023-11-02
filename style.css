@@ -62,7 +62,7 @@ picture img, img {
     justify-content: right;
 }
 
-#current {
+.current {
     text-decoration: underline solid 1px black;
 }
 
