@@ -723,7 +723,6 @@ footer p {
     color: white;
 }
 
-
 @media (max-width: 1800px) {
     .vinyl-row {
         grid-template-columns: repeat(4, 1fr);
@@ -1214,4 +1213,8 @@ footer p {
 }
 #img22 {
     background-image: url(bilder/MegadethThirteen.jpg)
+}
+
+.underline-animation-white a{
+    color: white;
 }
