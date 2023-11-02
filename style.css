@@ -26,7 +26,7 @@ nav {
     gap: 20px;
 }
 
-picture img, img{
+picture img, img {
     padding-left: 50px;
     cursor: pointer;
     height: 35px;
@@ -62,7 +62,7 @@ picture img, img{
     justify-content: right;
 }
 
-#current{
+#current {
     text-decoration: underline solid 1px black;
 }
 
@@ -108,7 +108,7 @@ h3 {
     transition: color 0.3s;
 }
 
-.underline-animation a{
+.underline-animation a {
     color: white;
 }
 
@@ -118,9 +118,8 @@ h3 {
     color: white;
 }
 
-.underline-animation::after,
-.underline-animation2::after,
-.underline-animation-catalogue-h3::after{
+.underline-animation-white::after,
+.underline-animation-black::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -133,26 +132,23 @@ h3 {
     margin-bottom: -5px;
 }
 
-.underline-animation:hover::after, 
-.underline-animation2:hover::after,
-.underline-animation-catalogue-h3:hover::after {
+.underline-animation-white:hover::after, 
+.underline-animation-black:hover::after {
     transform: scaleX(1);
     transform-origin: center;
 } 
 
-.underline-animation2,
-.underline-animation-catalogue-h3 {
+.underline-animation-black {
     display: inline-block;
     position: relative;
     color: black;
 }
 
-.underline-animation::after{
+.underline-animation-white::after {
     background-color: white;
 }
 
-.underline-animation2::after,
-.underline-animation-catalogue-h3::after {
+.underline-animation-black::after {
     background-color: black;
 }
 
@@ -187,22 +183,6 @@ h3 {
     margin-right: 10px;
 }
 
-.whats-popular > div:nth-child(1) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.whats-popular > div > div {
-    display: flex;
-    align-items: center;
-}
-
-.whats-popular > div div p {
-    cursor: pointer;
-    margin-right: 10px;
-}
-
 h2 {
     font-weight: 800;
     font-size: 35px;
@@ -210,7 +190,8 @@ h2 {
     border-bottom: 3px solid black;
 }
 
-header h2{
+
+header h2 {
     cursor: pointer;
 }
 
@@ -236,6 +217,7 @@ section {
     width: 200px;
     background-size: contain;
 }
+
 .vinyl-row div:hover .vinyl-cover {
     transition: 1s;
     margin-left: 150px;
@@ -261,11 +243,13 @@ section {
     width: 200px;
     background-size: contain;
 }
+
 .vinyl-row2 div:hover .vinyl-cover {
     transition: 1s;
     margin-left: 150px;
     transform: rotate(45deg);
 }
+
 .vinyl-cover {
     padding-left: 0px;
     z-index: -1;
@@ -276,14 +260,13 @@ section {
     transform: rotate(-45deg);
     transition: 1s;
 }
-#promotion-picture img{
+
+#promotion-picture img {
     width: 100vw;
     height: auto;
     cursor: default;
     padding-left: 0px;
 }
-    
-
 
 #promotion {
     display: flex;
@@ -335,19 +318,19 @@ h5 {
     margin-top: 10px;
 }
 
-.test {
-    align-items: center;
+.pricing-card {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 300px;
     height: 50px;
 }
 
-.test h5 {
+.pricing-card h5 {
     margin-top: 0;
 }
 
-section button{
+section button {
     font-family: "raleway";
     font-weight: 700;
     cursor: pointer;
@@ -372,18 +355,18 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto min-content;
-    justify-content: space-around;
+    justify-content: space around;
     align-items: center;
     width: auto;
     background-color: black;
 }
 
-#catalogue-hero footer{
+#catalogue-hero footer {
     padding-left: 50px;
     padding-right: 50px;
 }
 
-footer a{
+footer a {
     color: white;
 }
 
@@ -395,7 +378,7 @@ footer div {
 
 footer div:nth-child(2) {
     justify-content: end;
-  }
+}
 
 footer p {
     font-size: 10px;
@@ -412,30 +395,23 @@ footer div:nth-child(3) > img {
     height: 110px;
 }
 
-details{
+details {
     background-color: white;
     font-size: 15px;
     font-weight: 700;
 }
 
-details > p:hover{
+details > p:hover {
     text-decoration: underline 1px solid black;
-
 }
 
-#drop-nav{
+#drop-nav {
     display: flex;
     padding-left: 50px;
 }
 
-@media (min-width:1000px){
-    #drop-nav{
-        display: none;
-    }
-}
-
 ul {
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0;
     text-align: center;
 }
@@ -447,7 +423,7 @@ li {
     list-style-type: none;
 }
 
-li:hover{
+li:hover {
     text-decoration: underline 1px solid white;
 }
 
@@ -460,11 +436,6 @@ li:hover{
     font-size: 22px;
 }
 
-a{
-    color: black;
-    text-decoration: none;
-}
-
 header a {
     color: white;
 }
@@ -473,30 +444,30 @@ header a {
     color: black;
 }
 
-h6{
+h6 {
     width: 300px;
     display: flex;
     justify-content: space-between;
 }
 
-h6 span{
+h6 span {
     color: red;
 }
 
-#catalogue{
+#catalogue {
     justify-content: center;
     display: flex;
     height: auto;
     width: auto;
 }
 
-#catalogue h1{
+#catalogue h1 {
     font-size: 80px;
     color: white;
     text-align: center;
 }
 
-#catalogue-header{
+#catalogue-header {
     padding-left: 50px;
     padding-right: 50px;
     height: 100px;
@@ -504,33 +475,37 @@ h6 span{
     align-items: center;
 }
 
-#catalogue-hero{
+#catalogue-hero {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 100px auto 100px;
 }
 
-
-#bread{
+#bread {
     gap: 20px;
     display: flex;
     align-items: center;
 }
 
-#bread h5{
+#bread h5 {
     margin-top: 0px;
     margin-left: 50px;
     font-size: 15px;
-    
 }
 
-#catalogue-background{
+a,
+#order-header a {
+    color: black;
+    text-decoration: none;
+}
+
+#catalogue-background {
     height: 100px;
     background-color: black;
 }
 
-#vinyl-nav{
+#vinyl-nav {
     padding-left: 50px;
     padding-right: 50px;
     display: grid;
@@ -538,7 +513,7 @@ h6 span{
     grid-template-rows: 1fr 100px;
 }
 
-nav > button{
+nav > button {
     cursor: pointer;
     border: none;
     font-family: "raleway";
@@ -550,20 +525,19 @@ nav > button{
     transition: 0.3s;
 }
 
-nav > button:hover{
+nav > button:hover {
     transition: 0.3s;
     border: 1px solid black;
     background-color: white;
     color: black;
 }
 
-#vinyl-nav > div:nth-child(1){
+#vinyl-nav > div:nth-child(1) {
     position: sticky;
     top: 0;
     height: min-content;
     grid-row: 1/-1;
 }
-
 
 #vinyl-nav > div > ul {
     text-align: start;
@@ -574,7 +548,8 @@ nav > button:hover{
     display: block;
 }
 
-#background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
+#background nav:nth-child(1),
+#catalogue-hero nav:nth-child(1) {
     background-color: white;
     width: auto;
     height: 50px;
@@ -583,118 +558,277 @@ nav > button:hover{
     padding-left: 50px;
     padding-right: 50px;
 }
-#catalogue-hero nav:nth-child(1){
+
+#catalogue-hero nav:nth-child(1) {
     background-color: black;
 }
 
+#order-header {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    grid-column: 1/-1;
+}
 
-footer p{
+#order-logo {
+    border-bottom: none;
+    color: black;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.order-nav {
+    display: flex;
+    gap: 30px;
+}
+
+#left {
+    border-right: 1px solid grey;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right > div > .vinyl-cover {
+    height: 500px;
+    width: 500px;
+    margin-left: 200px;
+}
+
+#right div {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+}
+
+form {
+    background-color: white;
+    width: 700px;
+    height: 750px;
+}
+
+fieldset {
+    padding: 0;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+input {
+    border: 1px solid gray;
+    height: 45px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.full {
+    grid-column: 1/-1;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
+#checkout-vinyl {
+    display: flex;
+    height: 100px;
+}
+
+#right-side {
+    height: 100vh;
+    width: auto;
+    background: black;
+}
+
+body > .order-nav {
+    background-color: white;
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#checkout-vinyl p {
+    position: relative;
+    align-self: center;
+}
+
+h4 {
+    margin-left: 20px;
+}
+
+span {
+    font-size: 10px;
+}
+
+#total-cost {
+    height: 100px;
+    width: auto;
+}
+
+.binding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#order-button {
+    cursor: pointer;
+    font-family: "raleway";
+    height: 40px;
+    width: 100px;
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+#order-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#user-agreement {
+    cursor: pointer;
+    text-decoration: underline 1px solid;
+}
+
+footer p {
     margin-top: 0;
 }
 
+.underline-animation-white a{
+    color: white;
+}
 
 
 @media (max-width: 1800px) {
-    .vinyl-row{ 
-        grid-template-columns: repeat(4, 1fr); 
+    .vinyl-row {
+        grid-template-columns: repeat(4, 1fr);
     }
-  }
-
-  @media (max-width: 1600px) {
-    .vinyl-row{ 
-        grid-template-columns: repeat(3, 1fr); 
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .vinyl-row{ 
-        grid-template-columns: repeat(2, 1fr); 
-    }
-  }
-
-  @media (max-width: 1000px) {
-
-
-    #main-text h1{
-        font-size: 70px;
-
-    }
-  }
+}
 
 @media (max-width: 1750px) {
-    .vinyl-row2{ 
-        grid-template-columns: repeat(3, 1fr); 
+    .vinyl-row2 {
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+}
 
-  @media (max-width: 1400px) {
-
-    #main-text button {
-        height: 55px;
-        width: 275px;
-      }
-
-
-      #main-text button:hover {
-        width: 300px;
-      }
-
-
-    #main-text h1{
-        font-size: 50px;
+@media (max-width: 1600px) {
+    .vinyl-row {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .vinyl-row2{ 
-        grid-template-columns: repeat(2, 1fr); 
+    #left {
+        border-right: none;
     }
-
-    h2{
-        font-size: 30px;
-    }
-
-  }
-  
-  @media (min-width:1000px){
     
-    #background nav:nth-child(1),  #catalogue-hero nav:nth-child(1){
+    #right {
         display: none;
     }
 }
-@media (max-width: 999px){
 
-    #catalogue-hero {
-        grid-template-rows: 50px 50px 100px max-content 1fr 100px;
-      }
-      #catalogue-header{
-        background: none;
-        background-color: white;
-      }
-
-      #catalogue-header #logo{
-        color: black;
-      }
-    .whats-popular{
-        padding: 50px 50px 50px 50px;
+@media (max-width: 1400px) {
+    #main-text button {
+        height: 55px;
+        width: 275px;
     }
 
-    header{
-        padding-left: 50px;
-        padding-right: 50px;
+    #main-text button:hover {
+        width: 300px;
     }
 
-    header a{
+    #main-text h1 {
+        font-size: 50px;
+    }
+
+    .vinyl-row2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .vinyl-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    #drop-nav {
         display: none;
     }
 
-    #main-text{
+    #background nav:nth-child(1),
+    #catalogue-hero nav:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    #main-text h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 999px) {
+    #catalogue-hero {
+        grid-template-rows: 50px 50px 100px max-content 1fr 100px;
+    }
+    #catalogue-header {
+        background: none;
+        background-color: white;
+    }
+    #catalogue-header #logo {
+        color: black;
+    }
+    .whats-popular {
+        padding: 50px 50px 50px 50px;
+    }
+
+    header {
         padding-left: 50px;
         padding-right: 50px;
-      }
-      #main-text button{
-        justify-self: start;
-      }
+    }
 
-      #main-text h1{
+    .link {
+        display: none;
+    }
+
+    #main-text {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #main-text button {
+        justify-self: start;
+    }
+
+    #main-text h1 {
         text-align: left;
     }
     #background {
@@ -703,19 +837,42 @@ footer p{
 
     #vinyl-nav > div:nth-child(1) {
         display: none;
-      }
-      #vinyl-nav {
-          padding-left: 0px;
-          padding-right: 0px;
-          display: grid;
-          grid-template-columns: 1fr;
-        }
+    }
+    #vinyl-nav {
+        padding-left: 0px;
+        padding-right: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
+@media (min-width: 900px) {
+    body > .order-nav {
+        display: none;
+    }
+}
 
-@media (max-width: 800px){  
-    
-    .vinyl-row{
+@media (max-width: 899px) {
+    #left {
+        border-right: none;
+    }
+
+    #right, #left, #order-header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    form {
+        width: auto;
+    }
+
+    #order-header > .order-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {  
+    .vinyl-row {
         grid-template-columns: 1fr;
     }
 
@@ -725,207 +882,269 @@ footer p{
         grid-column: 1fr;
     }
 
-    .vinyl-row{
+    .vinyl-row {
         margin-top: 0px;
     }
-      .whats-popular > div > div {
+
+    .whats-popular > div > div {
         display: none;
-      }
+    }
 
-      h5{
+    h5 {
         font-size: 15px;
-      }
+    }
 
-      h6{
+    h6 {
         font-size: 10px;
-      }
-    
-      .whats-popular > div:nth-child(1) {
+    }
+
+    .whats-popular > div:nth-child(1) {
         justify-content: center;
-      }
+    }
 
-      section{
+    section {
         justify-self: center;
-      }
+    }
 
-      footer{
+    footer {
         padding-left: 50px;
         padding-right: 50px;
-      }
+    }
 
-      footer h2 {
+    footer h2 {
         font-size: 21px;
-      }
+    }
 
-      li{
+    li {
         font-size: 10px;
-      }
+    }
+}
+
+@media (min-width: 751px) {
+    #second-nav img {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    picture img,
+    img {
+        padding-left: 0px;
+        height: 24px;
     }
 
-    @media (min-width:751px){
-
-        #second-nav img{
-            display: none;
-        }
+    .vinyl-row2 {
+        grid-template-columns: 1fr;
     }
-    
-    @media (max-width:750px){
 
-        picture img, img {
-            padding-left: 0px;
-            height: 24px;
-          }
+    #bread h5 {
+        font-size: 11px;
+    }
 
-        .vinyl-row2 {
-            grid-template-columns: 1fr;
-          }
+    #main-text button:hover {
+        width: 210px;
+    }
 
-        #bread h5{
-            font-size: 11px;
-        }
-        
-        #main-text button:hover{
-            width: 210px;
-          }
-        section button {
-            width: 70px;
-            height: 21px;
-            font-size: 7px;
-          }
-        .test {
-            width: 200px;
-            height: 50px;
-          }
+    section button {
+        width: 70px;
+        height: 21px;
+        font-size: 7px;
+    }
 
-        h6{
-            width: 200px;
-        }
-        .vinyl-row > section div:nth-child(1),.vinyl-row2 > section div:nth-child(1), .vinyl-cover {
-            height: 140px;
-            width: 140px;
-          }
+    .pricing-card {
+        width: 200px;
+        height: 50px;
+    }
 
-        .vinyl-row {
-            grid-template-columns: 1fr;
-          }
-    
-        h2{
-            font-size: 21px;
-        }
-    
-        h5{
+    h6 {
+        width: 200px;
+    }
+
+    .vinyl-row > section div:nth-child(1),
+    .vinyl-row2 > section div:nth-child(1),
+    .vinyl-cover {
+        height: 140px;
+        width: 140px;
+    }
+
+    .vinyl-row {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h5 {
         font-size: 13px;
-        }
-    
-        h6{
-        font-size: 8px;
-        }
-        #main-text h1{
-            font-size: 35px;
-
-        }
-
-        #main-text button{
-            height: 39px;
-            width: 193px;
-            font-size: 21px;
-          }
-
-        #logo{
-            font-size: 25px;
-        }
-
-        #background nav:nth-child(1) h3,  #catalogue-hero nav:nth-child(1) h3{
-            margin-left: -20px;
-            width: max-content;
-            padding: 0;
-            margin: 0;
-            font-size: 10px;
-
-        }
-
-        #drop-nav{
-            padding-left: 0px;
-            justify-content: center;
-        }
-        
-            .vinyl-row2{
-                padding-left: 0px;
-            }
-        
-        
-            #background nav:nth-child(1), #catalogue-hero nav:nth-child(1){
-                padding-left: 0px;
-                padding-right: 0px;
-                justify-content: center;
-              }
-        
-            header{
-                height: 50px;
-                background: none;
-                background-color: white;
-                padding-left: 0;
-                padding-right: 0;
-               justify-content: center;
-            }
-        
-            header h2{
-                width: max-content;
-            }
-        
-            #logo{
-                color: black;
-            }
-            header nav{
-                display: none;
-            }
-        
-            #main-text{
-                text-align: center;
-                padding-right: 0px;
-                padding-left: 0px;
-                width: 100%;
-            }
-        
-            #main-text h1{
-                text-align: center;
-            }
-        
-            #main-text button{
-                justify-self: center;
-            }
-        
-            #main-text button:hover{
-                width: 250px;
-            }
-        
-            h2{
-                font-size: 22px;
-            }
-        
-            footer h2{
-                font-size: 15px;
-            }
-        
-            li{
-                font-size: 6px;
-            }
-            .vinyl-row div:hover .vinyl-cover, .vinyl-row2 div:hover .vinyl-cover {
-                margin-left: 105px;
-            }
-            #bread{
-                justify-content: center;
-              }
-        
-            #bread h5{
-                margin-left: 0px;
-            }
-        
-            #background{
-                grid-template-rows: 50px 50px auto;
-              }
     }
 
+    h6 {
+        font-size: 8px;
+    }
+
+    #main-text h1 {
+        font-size: 35px;
+    }
+
+    #main-text button {
+        height: 39px;
+        width: 193px;
+        font-size: 21px;
+    }
+
+    #logo {
+        font-size: 25px;
+    }
+
+    #background nav:nth-child(1) h3,
+    #catalogue-hero nav:nth-child(1) h3 {
+        margin-left: -20px;
+        width: max-content;
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    #drop-nav {
+        padding-left: 0px;
+        justify-content: center;
+    }
+
+    .vinyl-row2 {
+        padding-left: 0px;
+    }
+
+    #background nav:nth-child(1),
+    #catalogue-hero nav:nth-child(1) {
+        padding-left: 0px;
+        padding-right: 0px;
+        justify-content: center;
+    }
+
+    header,
+    #order-header,
+    .order-nav {
+        height: 50px;
+        background: none;
+        background-color: white;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    #order-header {
+        height: 100px;
+    }
+
+    header h2 {
+        width: max-content;
+    }
+
+    #logo {
+        color: black;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #main-text {
+        text-align: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    #main-text h1 {
+        text-align: center;
+    }
+
+    #main-text button {
+        justify-self: center;
+    }
+
+    #main-text button:hover {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    footer h2 {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 6px;
+    }
+
+    .vinyl-row div:hover .vinyl-cover,
+    .vinyl-row2 div:hover .vinyl-cover {
+        margin-left: 105px;
+    }
+
+    #bread {
+        justify-content: center;
+    }
+
+    #bread h5 {
+        margin-left: 0px;
+    }
+
+    #background {
+        grid-template-rows: 50px 50px auto;
+    }
+}
+
+@media (max-width: 540px) {
+    input::placeholder {
+        text-align: center;
+    }
+
+    input {
+        height: 32px;
+        padding-left: 0px;
+    }
+
+    #right, #left, #order-header, body .order-nav {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    form {
+        height: 620px;
+    }
+
+    #order-logo {
+        font-size: 25px;
+    }
+
+    .order-nav h3 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    fieldset > input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    body > .order-nav, #order-header {
+        justify-content: center;
+    }
+
+    #left {
+        padding-top: 20px;
+    }
+
+    #order-header {
+        height: 50px;
+    }
+}
 
 #img1 {
     background-image: url(bilder/Metallica_-_Metallica_cover.jpg);
