@@ -759,10 +759,6 @@ footer p {
         width: 300px;
     }
 
-    #main-text h1 {
-        font-size: 50px;
-    }
-
     .vinyl-row2 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1213,8 +1209,4 @@ footer p {
 }
 #img22 {
     background-image: url(bilder/MegadethThirteen.jpg)
-}
-
-.underline-animation-white a{
-    color: white;
 }
