@@ -755,6 +755,10 @@ footer p {
         width: 275px;
     }
 
+    #main-text h1{
+        font-size: 63px;
+    }
+
     #main-text button:hover {
         width: 300px;
     }
